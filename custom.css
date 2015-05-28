@@ -1,7 +1,7 @@
 /*A bunch of different styling*/
 body
 {
-	background-image: url("images/B2.jpg");
+	background-image: url("images/B2.jpg"); 
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -24,6 +24,7 @@ body
     color:white;
 }
 
+.nav.navbar-nav li a:link,
 .nav.navbar-nav li a:hover,
 .navbar-brand:hover
 {
@@ -56,28 +57,45 @@ h4, .box a
 	color:white;
 }
 
-body, html 
-{
+html, body, #wrapper, #titlepage, .wholepage {
 	height:100%;
-	position: relative;
+}
+/*Sticky footer on the bottom stays at the bottom*/
+
+#wrapper {
+	background-color: rgba(0,0,0,0.5);
 }
 
-/*Sticky footer on the bottom stays at the bottom*/
-#wrapper
+.wholepage {
+	position:relative;
+}
+
+.wholepage img {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: absolute;
+}
+/* #wrapper
 {
 	background-color: rgba(0,0,0,0.5);
 	min-height: 100%;
 	position: relative;
-}
+} */
 
 #titlepage
 {
-	padding-top: 200px;
-	padding-bottom:200px;
+	margin:0 auto;
+	width:100%;
+	height:100%;
+	/* position: relative; */
 }
 
 #content
 {
+	background-color: rgba(0,0,0,0.5);
 	padding:10px;
 }
 
@@ -85,14 +103,13 @@ body, html
 {
 	width:100%;
 	height:100px;
-	position:absolute;
 	bottom:0;
 	left:0;
-}
-
-#footer .box 
-{
 	background-color: rgba(0,0,0,0.5)
 }
 
-/* Key Frames and transitions */
+/* #footer .box 
+{
+	background-color: rgba(0,0,0,0.5)
+} */
+
