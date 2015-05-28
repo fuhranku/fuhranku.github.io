@@ -1,7 +1,15 @@
 /*A bunch of different styling*/
+body
+{
+	background-image: url("images/B2.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
 .navbar.navbar-fixed-top
 {
-	background-color:rgb(178,255,102);
+	background-color:rgba(0,0,0,0.5);
 }
 
 .nav.navbar-nav li a,
@@ -20,7 +28,7 @@
 .navbar-brand:hover
 {
 	background-color: transparent;
-	color:black;
+	color:white;
 }
 
 .navbar-brand
@@ -31,7 +39,7 @@
 h1, .row div p, p, .jumbotron h1
 {
 	font-family:"Century Gothic";
-	text-align: justify;
+	text-align: center;
 	color:white;
 }
 
@@ -50,8 +58,6 @@ h4, .box a
 
 body, html 
 {
-	background-color: rgb(34,0,97);
-	background-size:contain;
 	height:100%;
 	position: relative;
 }
@@ -59,14 +65,20 @@ body, html
 /*Sticky footer on the bottom stays at the bottom*/
 #wrapper
 {
+	background-color: rgba(0,0,0,0.5);
 	min-height: 100%;
 	position: relative;
+}
+
+#titlepage
+{
+	padding-top: 200px;
+	padding-bottom:200px;
 }
 
 #content
 {
 	padding:10px;
-	padding-bottom:160px;  
 }
 
 #footer 
@@ -78,14 +90,9 @@ body, html
 	left:0;
 }
 
-/* Key Frames and transitions */
-@keyframes fadeIn {
-	0% {
-		opacity:0;
-	}
-	100% {
-		opacity: 1;
-	}
+#footer .box 
+{
+	background-color: rgba(0,0,0,0.5)
 }
 
-@keyframes fadeInUp
+/* Key Frames and transitions */
