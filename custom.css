@@ -15,10 +15,6 @@ body
 .nav.navbar-nav li a,
 .navbar-brand
 {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
 	font-family:"Century Gothic";
     font-size:20px;
     color:white;
@@ -26,16 +22,12 @@ body
 
 .nav.navbar-nav li a:link,
 .nav.navbar-nav li a:hover,
-.navbar-brand:link,
+.nav.navbar-nav li a:visited,
+.navbar-header .navbar-brand:link,
 .navbar-brand:hover
 {
 	background-color: transparent;
 	color:white;
-}
-
-.navbar-brand
-{
-	padding-left:150px;
 }
 
 .row div p, p, .jumbotron h1
@@ -55,8 +47,8 @@ h4, .box a
 
 html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 	height:100%;
+	width:100%;
 }
-/*Sticky footer on the bottom stays at the bottom*/
 
 #wrapper {
 	background-color: rgba(0,0,0,0.5);
@@ -66,7 +58,7 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 	position:relative;
 }
 
-.wholepage img {
+#titlepage .wholepage img {
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -74,20 +66,6 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 	margin: auto;
 	position: absolute;
 }
-/* #wrapper
-{
-	background-color: rgba(0,0,0,0.5);
-	min-height: 100%;
-	position: relative;
-} */
-/*
-#titlepage
-{
-	margin:0 auto;
-	width:100%;
-	height:100%;
-	position: relative; 
-}*/
 
 #content, #projects
 {
@@ -104,9 +82,3 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 	left:0;
 	background-color: rgba(0,0,0,0.5)
 }
-
-/* #footer .box 
-{
-	background-color: rgba(0,0,0,0.5)
-} */
-
