@@ -5,11 +5,12 @@ body
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-position: center center;
 }
-
-.navbar.navbar-fixed-top
+.navbar.navbar-default.navbar-fixed-top
 {
-	background-color:rgba(0,0,0,0.5);
+	background-color:rgba(0,0,0,0.5); 
+	width: 100%;
 }
 
 .nav.navbar-nav li a,
@@ -19,6 +20,7 @@ body
     font-size:20px;
     color:white;
 }
+
 
 .nav.navbar-nav li a:link,
 .nav.navbar-nav li a:hover,
@@ -38,6 +40,11 @@ body
 	color:white;
 }
 
+.row {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
 h4, .box a
 {
 	text-align: left;
@@ -46,6 +53,7 @@ h4, .box a
 }
 
 html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
+	min-height: 100%;
 	height:100%;
 	width:100%;
 }
@@ -71,7 +79,7 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 {
 	background-color: rgba(0,0,0,0.5);
 	padding:10px;
-	padding-top: 60px;
+	padding-top: 5%;
 }
 
 #footer 
