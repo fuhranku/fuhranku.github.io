@@ -10,12 +10,12 @@ body
 
 @font-face {
 	font-family: "MyCenturyGothic";
-	src: local("Century Gothic"), url("GOTHIC.ttf");
+	src: local("Century Gothic"), url("GOTHIC.svg");
 }
 
 @font-face {
 	font-family: "MyCenturyGothic";
-	src: url("GOTHICB.ttf");
+	src: url("GOTHICB.svg");
 	font-weight: bold;
 }
 
