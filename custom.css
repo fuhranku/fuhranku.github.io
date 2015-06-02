@@ -8,6 +8,17 @@ body
 	background-position: center center;
 }
 
+@font-face {
+	font-family: "MyCenturyGothic";
+	src: local("Century Gothic"), url("GOTHIC.ttf");
+}
+
+@font-face {
+	font-family: "MyCenturyGothic";
+	src: url("GOTHICB.ttf");
+	font-weight: bold;
+}
+
 .navbar.navbar-default.navbar-fixed-top
 {
 	background-color:rgba(0,0,0,0.5); 
@@ -17,7 +28,7 @@ body
 .nav.navbar-nav li a,
 .navbar-brand
 {
-	font-family:"Century Gothic";
+	font-family:"MyCenturyGothic";
     font-size:20px;
     color:white;
 }
@@ -36,7 +47,7 @@ body
 p
 {
 	font-size:20px;
-	font-family:"Century Gothic";
+	font-family:"MyCenturyGothic";
 	text-align: justify;
 	color:white;
 }
@@ -49,7 +60,7 @@ p
 h4, .box a
 {
 	text-align: center;
-	font-family: "Century Gothic";
+	font-family: "MyCenturyGothic";
 	color:white;
 }
 
