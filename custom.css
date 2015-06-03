@@ -11,13 +11,15 @@ body
 @font-face {
 	font-family: "MyCenturyGothic";
 	src: local("Century Gothic"), 
-			url("GOTHIC.svg#CenturyGothic") format("svg");
+		url("font/GOTHIC.svg#CenturyGothic") format("svg"),
+		url("font/GOTHIC.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: "MyCenturyGothic";
 	src: local("Century Gothic Bold"),
-		url("GOTHICB.svg#CenturyGothic-Bold") format("svg");
+		url("font/GOTHICB.svg#CenturyGothic-Bold") format("svg"),
+		url("font/GOTHICB.ttf") format("truetype");
 	font-weight: bold;
 }
 
@@ -94,7 +96,7 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 	position: absolute;
 }
 
-#content, #projects
+#content, #projects, #resume
 {
 	width: 100%;
 	background-color: rgba(0,0,0,0.5);
