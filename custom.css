@@ -17,9 +17,8 @@ body
 
 @font-face {
 	font-family: "MyCenturyGothic";
-	src: local("Century Gothic Bold"),
-		url("font/GOTHICB.svg#CenturyGothic-Bold") format("svg"),
-		url("font/GOTHICB.ttf") format("truetype");
+	src: url("font/GOTHICB.svg#CenturyGothic-Bold") format("svg"),
+		 url("font/GOTHICB.ttf") format("truetype");
 	font-weight: bold;
 }
 
