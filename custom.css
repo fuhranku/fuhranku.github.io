@@ -27,7 +27,16 @@ body
 {
 	background-color:rgba(0,0,0,0.5); 
 	width: 100%;
+	border-bottom: none;
+	box-shadow: none;
 }
+
+.navbar-default.navbar-fixed-top div.container-fluid div.collapse.navbar-collapse
+{
+	border-bottom: none;
+	border-top: none;
+	box-shadow: none;
+} 
 
 .nav.navbar-nav li a,
 .navbar-brand
@@ -45,6 +54,11 @@ body
 {
 	background-color: transparent;
 	color:white;
+}
+
+.navbar-toggle:hover,
+{
+
 }
 
 p
@@ -79,7 +93,7 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 }
 
 #wrapper {
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.3);
 	position:relative;
 }
 
@@ -111,7 +125,7 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 	height:150px;
 	bottom:0;
 	left:0;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.75);
 	position: relative;
 }
 
