@@ -1,7 +1,7 @@
 /*A bunch of different styling*/
 body
 {
-	background-image: url("images/B2.jpg"); 
+	background-image: url("images/city-sketch.jpg"); 
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -25,7 +25,8 @@ body
 
 .navbar.navbar-default.navbar-fixed-top
 {
-	background-color:rgba(0,0,0,0.5); 
+	/*background-color:rgba(0,0,0,0.5); */
+	background-image: url("images/graph-tile.png");
 	width: 100%;
 	border-bottom: none;
 	box-shadow: none;
@@ -42,8 +43,8 @@ body
 .navbar-brand
 {
 	font-family:"MyCenturyGothic";
-    font-size:20px;
-    color:white;
+    font-size:24px;
+    color: rgb(179, 238, 58);
 }
 
 .nav.navbar-nav li a:link,
@@ -53,12 +54,7 @@ body
 .navbar-brand:hover
 {
 	background-color: transparent;
-	color:white;
-}
-
-.navbar-toggle:hover,
-{
-
+	color: rgb(179, 238, 58);
 }
 
 p
@@ -66,7 +62,7 @@ p
 	font-size:20px;
 	font-family:"MyCenturyGothic";
 	text-align: justify;
-	color:white;
+	color: rgb(179, 238, 58);
 }
 
 .row {
@@ -78,7 +74,7 @@ h4, .box a
 {
 	text-align: center;
 	font-family: "MyCenturyGothic";
-	color:white;
+	color: rgb(179, 238, 58);
 }
 
 .title {
@@ -93,7 +89,6 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 }
 
 #wrapper {
-	background-color: rgba(0,0,0,0.3);
 	position:relative;
 }
 
@@ -113,7 +108,7 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 #content, #projects, #resume
 {
 	width: 100%;
-	background-color: rgba(0,0,0,0.5);
+	background-image: url("images/graph-tile.png");
 	padding:5%;
 }
 
@@ -148,7 +143,7 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 	}
 	
 	p {
-		font-size:13px;
+		font-size:16px;
 	}
 
 	.row {
