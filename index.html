@@ -34,35 +34,33 @@
 							</div>
 						</div>
 					</nav>
-					<img class="img-responsive center-block" src="images/TITLE.png" alt="Frank Chan"/>
+					<img class="img-responsive center-block" src="images/title2.png" alt="Frank Chan"/>
+					<img id="face" class="img-responsive center-block" src="images/title1.png" alt="Frank Chan" onmouseover="animatePic()"/>
 				</div>
 			</div>
 			<div id="content">
-				<div class="container-fluid">
-					<div class="wholepage">
-						<p class="title">about me</p>
-						<img class="img-responsive thumbnail" alt="Picture of me" src="images/PROF.jpg" style="float:right; width:30%; margin-left:5%"/>
+				<div class="wholepage">
+					<p class="title">about me</p>
+					<div class="container-fluid img-rounded" style="background-color:rgb(126, 192, 238)">
+						<img class="img-responsive img-thumbnail" alt="Picture of me" src="images/PROF.jpg" style="float:right; width:30%; margin-left:5%"/>
+						<br>
 						<p>My name is Frank Chan, I am 18 years old, and I live in New York City (Ithaca during the school year). I study Computer Science at Cornell University, Class of 2018. I like programming, shopping, and I love food. I am proficient in Java and C#, and have experience in Python. I am currently exploring HTML and JavaScript. I think the fun part is how much more I have to learn. You can check out what I'm working on in the Projects tab.</p>
 								
 					</div>
 				</div>
-			</div>
+			</div>	
 			<div id="projects">
 				<div class="container-fluid">
 					<div class="wholepage">
 						<p class="title">projects</p>
-						<img src="" style="float:right;"/>
 						<div class="row">
-							<div class="col-xs-4 img-rounded" style="background-color:transparent">
-								<br>
-								<img src="images/pyDuctor-icon.png" class="img-responsive img-circle center-block" style="border:10px solid rgb(126, 192, 238)"/>
-								<br>
+							<div class="col-xs-4 img-rounded" style="background: transparent;">
+								<a href="https://github.com/fuhranku/pyDuctor"><img src="images/pyDuctor-icon.png" class="img-responsive img-circle center-block" style="border:10px solid rgb(126, 192, 238)" onmouseover="hoverEffect(this, 'rgba(126, 192, 238, 1)', 'rgba(108, 166 ,205, 1)')" onmouseout="regularEffect(this, 'rgba(126, 192, 238, 1)')"/></a>
+								<p style="visibility:hidden; margin-top:5%">Created during HackBU, pyDuctor detects hand movements using Leap Motion to control the volume and tempo of songs. Check it out on GitHub by clicking the picture.</p>
 							</div>
-							
-							<div class= "col-xs-4 img-rounded" style="background-color:transparent">
-								<br>
-								<img src="images/dash-icon.png" class="img-responsive img-circle center-block" style="border:10px solid rgb(255, 193, 37)"/>
-								<br>
+							<div class= "col-xs-4 img-rounded" style="background: transparent;">
+								<a href="https://fuhranku.github.io/dash-in-the-dark"><img src="images/dash-icon.png" class="img-responsive img-circle center-block" style="border:10px solid rgb(255, 193, 37)" onmouseover="hoverEffect(this, 'rgba(255, 193, 37, 1)', 'rgba(238 ,180 ,34, 1)')" onmouseout="regularEffect(this, 'rgba(255, 193, 37, 1)')"/></a>
+								<p style="visibility:hidden; margin-top:5%">Dash in the Dark is a two player HTML5 and Javascript game involving a blind maze race followed by a fight to the death. Click the picture to play, or check it out on GitHub.</p>
 							</div>
 						</div>
 					</div>

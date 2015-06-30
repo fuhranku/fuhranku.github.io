@@ -62,7 +62,7 @@ p
 	font-size:20px;
 	font-family:"MyCenturyGothic";
 	text-align: justify;
-	color: rgb(179, 238, 58);
+	color: white;
 }
 
 .row {
@@ -80,6 +80,7 @@ h4, .box a
 .title {
 	font-size: 72px;
 	text-align: center;
+	color: rgb(179, 238, 58);
 }
 
 html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
@@ -112,7 +113,6 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 	padding:5%;
 }
 
-
 #footer 
 {
 	padding-top: 1px;
@@ -136,6 +136,7 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 .link {
 	display: inline-block;
 }
+
 
 @media only screen and (max-width: 720px) {
 	.title {
