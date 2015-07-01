@@ -23,7 +23,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
-								<a class="navbar-brand" href="#titlepage"><strong>frankchan</strong></a>
+								<a class="navbar-brand" href="#titlepage"><strong>Frank Chan</strong></a>
 							</div>
 							<div class="collapse navbar-collapse">
 								<ul class="nav navbar-nav">
@@ -36,6 +36,19 @@
 					</nav>
 					<img class="img-responsive center-block" src="images/title2.png" alt="Frank Chan"/>
 					<img id="face" class="img-responsive center-block" src="images/title1.png" alt="Frank Chan" onmouseover="animatePic()"/>
+					<div class="container links">
+						<div class="row">
+							<div class="col-xs-4">
+								<a href="https://www.linkedin.com/in/fuhranku"><img class="link img-responsive" src="images/social_li.png"/></a>
+							</div>
+							<div class="col-xs-4">
+								<a href="https://github.com/fuhranku"><img class="link img-responsive" src="images/social_gh.png"/></a>
+							</div>
+							<div class="col-xs-4">
+								<a href="https://plus.google.com/+FrankChansTheName/about"><img class="img-responsive" src="images/social_gplus.png"/></a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div id="content">
@@ -44,45 +57,39 @@
 					<div class="container-fluid img-rounded" style="background-color:rgb(126, 192, 238)">
 						<img class="img-responsive img-thumbnail" alt="Picture of me" src="images/PROF.jpg" style="float:right; width:30%; margin-left:5%"/>
 						<br>
-						<p>My name is Frank Chan, I am 18 years old, and I live in New York City (Ithaca during the school year). I study Computer Science at Cornell University, Class of 2018. I like programming, shopping, and I love food. I am proficient in Java and C#, and have experience in Python. I am currently exploring HTML and JavaScript. I think the fun part is how much more I have to learn. You can check out what I'm working on in the Projects tab.</p>
-								
+						<p>My name is Frank Chan, I am 18 years old, and I live in New York City (Ithaca during the school year). I study Computer Science at Cornell University, Class of 2018. I like programming, shopping, and I love food. Currently I am exploring different aspects of web development. I think the fun part is how much more I have to learn. You can check out what I'm working on in the Projects tab.</p>
+						<p>Languages: Java, C#, Javascript, Python, HTML, CSS</p>
 					</div>
 				</div>
 			</div>	
-			<div id="projects">
+			<div id="projects" class="wholepage">
 				<div class="container-fluid">
-					<div class="wholepage">
-						<p class="title">projects</p>
-						<div class="row">
-							<div class="col-xs-4 img-rounded" style="background: transparent;">
-								<a href="https://github.com/fuhranku/pyDuctor"><img src="images/pyDuctor-icon.png" class="img-responsive img-circle center-block" style="border:10px solid rgb(126, 192, 238)" onmouseover="hoverEffect(this, 'rgba(126, 192, 238, 1)', 'rgba(108, 166 ,205, 1)')" onmouseout="regularEffect(this, 'rgba(126, 192, 238, 1)')"/></a>
-								<p style="visibility:hidden; margin-top:5%">Created during HackBU, pyDuctor detects hand movements using Leap Motion to control the volume and tempo of songs. Check it out on GitHub by clicking the picture.</p>
-							</div>
-							<div class= "col-xs-4 img-rounded" style="background: transparent;">
-								<a href="https://fuhranku.github.io/dash-in-the-dark"><img src="images/dash-icon.png" class="img-responsive img-circle center-block" style="border:10px solid rgb(255, 193, 37)" onmouseover="hoverEffect(this, 'rgba(255, 193, 37, 1)', 'rgba(238 ,180 ,34, 1)')" onmouseout="regularEffect(this, 'rgba(255, 193, 37, 1)')"/></a>
-								<p style="visibility:hidden; margin-top:5%">Dash in the Dark is a two player HTML5 and Javascript game involving a blind maze race followed by a fight to the death. Click the picture to play, or check it out on GitHub.</p>
-							</div>
+					<p class="title">projects</p>
+					<div class="row">
+						<div class="col-sm-6 col-md-4 img-rounded" style="background: transparent;">
+							<a href="https://github.com/fuhranku/pyDuctor"><img src="images/pyDuctor-icon.png" class="img-responsive img-circle center-block" style="border:10px solid rgb(126, 192, 238)" onmouseover="hoverEffect(this, 'rgb(108, 166 ,205)')" onmouseout="regularEffect(this, 'rgb(126, 192, 238)')"/></a>
+							<p style="visibility:hidden; margin-top:5%">Created during HackBU, the Python program pyDuctor uses a Leap Motion device to detect hand motions, allowing you to control the volume and tempo of songs you play. Check it out on GitHub by clicking the picture.</p>
+						</div>
+						<div class= "col-sm-6 col-md-4 img-rounded" style="background: transparent;">
+							<a href="https://fuhranku.github.io/dash-in-the-dark"><img src="images/dash-icon.png" class="img-responsive img-circle center-block" style="border:10px solid rgb(255, 193, 37)" onmouseover="hoverEffect(this, 'rgb(238 ,180 ,34)')" onmouseout="regularEffect(this, 'rgb(255, 193, 37)')"/></a>
+							<p style="visibility:hidden; margin-top:5%">Dash in the Dark is a two player HTML5 and Javascript game involving a blind maze race followed by a fight to the death. Click the picture to play, or check it out on GitHub.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="resume">
-				<div class="container-fluid">
-					<div class="wholepage">
-						<p class="title">resume</p>
-						<p style="text-align:center;">You can also get a copy <a href="Resume Summer 2015.pdf">here.</a></p>
+				<p class="title">resume</p>
+				<div class="container-fluid img-rounded" style="background-color: rgb(255, 182, 193);">
+						<p style="text-align:center; margin-top:2%;">You can also get a copy <a href="Resume Summer 2015.pdf">here.</a></p>
 						<img class="img-responsive center-block"src="Resume Summer 2015.jpg" style="width:80%"/>
-					</div>
+						<br>
 				</div>
 			</div>
 			<div id="footer">
 				<div class="box">
-					<h4>connect with me | leave a message | recommend a restaurant</h4>
-					<div class="links">
-						<a href="https://www.linkedin.com/in/fuhranku"><img class="link img-responsive" src="images/LI2.png" onmouseover="this.src='images/LI.png'" onmouseout="this.src='images/LI2.png'"/> </a>
-						<a href="https://github.com/fuhranku"><img class="link img-responsive" src="images/GitHub2.png" onmouseover="this.src='images/GitHub.png'" onmouseout="this.src='images/GitHub2.png'"/></a>
-					</div>
+					<h3>THANKS FOR STOPPING BY</h3>
 					<h4>email: fc249@cornell.edu</h4>
+					<p style="font-size:12px">Copyright © Frank Chan 2015</p>
 				</div>
 			</div>
 		</div>
