@@ -1,27 +1,34 @@
-$(function() {
-		  $('a[href*=#]:not([href=#])').click(function() {
-		    
-		      var target = $(this.hash);
-		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-		      if (target.length) {
-		        $('html,body').animate({
-		          scrollTop: target.offset().top
-		        }, 1000);
-		        return false;
-		      }
-		  });
-		}); 
+$(document).ready(function() {
+	animatePic();
 
-window.onload = animatePic;
+	$('a[href*=#]:not([href=#])').click(function() {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+			$('html,body').animate({
+				scrollTop: target.offset().top
+			}, 1000);
+		return false;
+		}
+	});
+		
+	var changeNav = $('#content').offset().top;
+	$(document).scroll(function() {
+		if($(window).scrollTop() >= changeNav) {
+			$('.navbar.navbar-default.navbar-fixed-top').css('background', "url('images/graph-tile.png')");
+			$('.navbar a').css({'color' : 'rgb(137, 171, 224)', 'text-shadow' : 'none'});
+		}
+		else {
+			$('.navbar.navbar-default.navbar-fixed-top').css('background', 'transparent');
+			$('.navbar a').css({'color' : 'white', 'text-shadow' : '-1px -1px 0px gray, 1px -1px 0px gray, -1px 1px 0px gray, 1px 1px 0px gray'});
+		}
+	});
+});
 
 function animatePic() {
 	var element = document.getElementById('face');
-	element.style.transition = "opacity 2s ease-in-out .5s";
+	element.style.transition = "opacity 1s linear .5s";
 	element.style.opacity = 0;
-}
-
-function iconHover(id) {
-	id.style.transition();
 }
 
 function hoverEffect(id, accent) {
