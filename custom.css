@@ -197,6 +197,28 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 	.nav.navbar-nav li a,
 	.navbar-default .navbar-brand
 	{
-	    font-size:18px;
+	    font-size:16px;
+	    padding-top: 7px;
+	    padding-bottom: 7px;
+	}
+
+	#content {
+		min-height: 0;
+	}
+
+	.navbar {
+		min-height: 0;
+	}
+
+	nav.navbar .navbar-default .navbar-fixed-top, 
+	.navbar-default a.navbar-brand,
+	.navbar-header {
+		height: 30px !important;
+		min-height: 20px !important;
+		margin-bottom: 0px;
+	}
+
+	#content, #projects {
+		padding-top: 10%;
 	}
 }
