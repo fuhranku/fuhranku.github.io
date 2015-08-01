@@ -15,14 +15,6 @@ body
 		url("font/GOTHIC.ttf") format("truetype");
 }
 
-@font-face {
-	font-family: "MyCenturyGothic";
-	src: url("font/GOTHICB.svg#CenturyGothic-Bold") format("svg"),
-		url("font/GOTHICB.ttf") format("truetype"),
-		local("Century Gothic");
-	font-weight: bold;
-}
-
 .navbar.navbar-default.navbar-fixed-top
 {
 	background: transparent;
@@ -39,7 +31,7 @@ body
 } 
 
 .nav.navbar-nav li a,
-.navbar-brand
+.navbar-default .navbar-brand
 {
 	font-family:"MyCenturyGothic";
     font-size:24px;
@@ -54,7 +46,8 @@ body
 .nav.navbar-nav li a:hover,
 .nav.navbar-nav li a:visited,
 .navbar-header .navbar-brand:link,
-.navbar-brand:hover
+.navbar-header .navbar-brand:hover,
+.navbar-header .navbar-brand:visited
 {
 	background-color: transparent;
 	color: white;
@@ -138,6 +131,16 @@ html, body, #wrapper, #titlepage, #content, #projects, .wholepage {
 	right: 0;
 	margin: auto;
 	position: absolute;
+}
+
+.hide {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+}
+
+.proj-bubble {
+	border: 10px solid;
 }
 
 @media only screen and (max-width: 768px) {
