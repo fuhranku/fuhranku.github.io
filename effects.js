@@ -24,41 +24,56 @@ $(document).ready(function() {
 		}
 	});
 	
-	$('.proj-bubble').hover(function() {
-		if(/transparent|rgba\(0, 0, 0, 0\)/.test($(this).parent().css('background-color'))) {
-			var og = $(this).css('border-left-color');
-			$(this).css('box-shadow', '0 0 0 10px ' + og);
-			$(this).css('border-color', shade(og, 0.75));
-		}
-	}, function() {
-		if(/transparent|rgba\(0, 0, 0, 0\)/.test($(this).parent().css('background-color'))) {
-			$(this).css('border-color', $(this).css('box-shadow').replace(/^.*(rgba?\([^)]+\)).*$/,'$1'));
-			$(this).css('box-shadow', 'none');
-		}
-	});
+	if($(window).width() < 768) {
+		$('.proj-bubble').each(function(index) {
+			$this = $(this);
+			$this.css('box-shadow', '0 0 0 10px ' + $this.css('border-left-color'));
+			$this.parent().css('background-color', $this.css('border-left-color'));
+			$this.css('border-color', shade($this.css('border-left-color'), 0.75));
+			$this.next("p").removeClass('hide');
+			$this.next().next().removeClass('hide');
+		});
+	}
 
-	$('.proj-bubble').click(function() {
-		if(/transparent|rgba\(0, 0, 0, 0\)/.test($(this).parent().css('background-color'))) {
-			var og = $(this).css('box-shadow').replace(/^.*(rgba?\([^)]+\)).*$/,'$1');
-			$(this).css('border-color', shade(og, 0.75));
-			$(this).css('box-shadow', '0 0 0 10px ' + og);
-			$(this).parent().css('background', og);
-			$(this).next("p").removeClass('hide');
-			$(this).next().next().removeClass('hide');
-			$(this).next().hide().slideDown(500);
-		}
+	else {
+		$('.proj-bubble').hover(function() {
+			$this = $(this);
+			if(!$this.hasClass('hoverActive')) {
+				var og = $(this).css('border-left-color');
+				$this.css('box-shadow', '0 0 0 10px ' + og);
+				$this.css('border-color', shade(og, 0.75));
+				$this.addClass('hoverActive');
+			}
+		}, function() {
+			$this = $(this);
+			if(/transparent|rgba\(0, 0, 0, 0\)/.test($(this).parent().css('background-color'))) {
+				$this.css('border-color', $(this).css('box-shadow').replace(/^.*(rgba?\([^)]+\)).*$/,'$1'));
+				$this.css('box-shadow', 'none');
+				$this.removeClass('hoverActive');
+			}
+		});
 
-		else {
-			og = $(this).parent().css('background-color');
-			$(this).next().slideUp(500, function() {
-				$(this).addClass('hide').show();
-				$(this).next().addClass('hide');
-				$(this).parent().css('background', 'transparent');
-				$(this).prev().css('border-color', og);
-				$(this).prev().css('box-shadow', 'none');
-			});
-		}
-	});
+		$('.proj-bubble').click(function() {
+			if(/transparent|rgba\(0, 0, 0, 0\)/.test($(this).parent().css('background-color'))) {
+				var og = $(this).css('box-shadow').replace(/^.*(rgba?\([^)]+\)).*$/,'$1');
+				$(this).css('border-color', shade(og, 0.75));
+				$(this).css('box-shadow', '0 0 0 10px ' + og);
+				$(this).parent().css('background', og);
+				$(this).next("p").removeClass('hide');
+				$(this).next().next().removeClass('hide');
+				$(this).next().hide().slideDown(500);
+			}
+
+			else {
+				og = $(this).parent().css('background-color');
+				$(this).next().slideUp(500, function() {
+					$(this).addClass('hide').show();
+					$(this).next().addClass('hide');
+					$(this).parent().css('background', 'transparent');
+				});
+			}
+		});
+	}
 });
 
 function animatePic() {
