@@ -1,6 +1,3 @@
----
-title: Personal Website
----
 <!DOCTYPE html>
 <html>
   <head>
@@ -54,13 +51,31 @@ title: Personal Website
           <span id="myproj"><span id="my" class="heading cursive">my</span><span id="proj-heading" class="heading bold">projects</span></span>
           <div class="col-1-2">
             <div id="proj-container">
-            {% for project in site.data.projects %}
+            
               <div class="proj-desc">
-                <span class="proj-name">{{ project.name }}</span>
-                <p>{{ project.brief }}</p>
-                <p>Technologies used: {{ project.technologies }}</p>
+                <span class="proj-name">Cornell First in Class Website</span>
+                <p>Official website for Cornell First in Class, with news, events, and information regarding Cornell's first generation student initiatives.</p>
+                <p>Technologies used: HTML, CSS, jQuery, MySQL, PHP</p>
               </div>
-            {% endfor %}
+            
+              <div class="proj-desc">
+                <span class="proj-name">LeafDB</span>
+                <p>A functional local file storage system implemented in OCaml with SQL-like commands to query. Information is stored in csv files organized into different directories.</p>
+                <p>Technologies used: OCaml</p>
+              </div>
+            
+              <div class="proj-desc">
+                <span class="proj-name">Dash in the Dark</span>
+                <p>A two player maze race written in HTML5 and vanilla Javascript. Find your way out of the randomly generated maze in the dark and fight to win.</p>
+                <p>Technologies used: HTML5, Javascript</p>
+              </div>
+            
+              <div class="proj-desc">
+                <span class="proj-name">pyDuctor</span>
+                <p>Control your music by using hand motions to adjust the volume and pitch of .wav files. Created during Hack BU, my first hackathon.</p>
+                <p>Technologies used: Python, LeapMotion</p>
+              </div>
+            
             </div>
           </div>
         </div>
