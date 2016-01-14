@@ -36,4 +36,7 @@ $(document).ready(function() {
   $('#below').click(function() {
     $(".main").moveTo(4);
   });
+  $('#brand').click(function() {
+    $("#brand").moveTo(1);
+  });
 });
