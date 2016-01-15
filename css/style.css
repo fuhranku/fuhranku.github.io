@@ -330,6 +330,18 @@ textarea {
   .fixed {
     position: relative;
   }
+
+  .onepage-wrapper .section {
+    height: auto;
+  }
+
+  .heading {
+    font-size: 60px;
+  }
+
+  .heading-small {
+    font-size: 30px;
+  }
 }
 
 @media (min-width : 320px) and (max-width : 720px) {
@@ -339,5 +351,13 @@ textarea {
 
   .onepage-wrapper .section {
     height: auto;
+  }
+
+  .heading {
+    font-size: 75px;
+  }
+
+  .heading-small {
+    font-size: 25px;
   }
 }
