@@ -32,7 +32,7 @@ section {
 
 .img-circle {
   border-radius: 50%;
-  border: 5px solid black;
+  outline: 5px solid black;
 }
 
 #headshot {
@@ -132,6 +132,7 @@ section {
   color: white;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5em;
+  font-size: 16px;
 }
 
 #mission {
@@ -312,7 +313,6 @@ textarea {
 #ride {
   color: #FFFC73;
   font-weight: 300;
-  font-size: 48px;
   text-decoration: none;
   text-transform: lowercase;
   font-family: 'Raleway', sans-serif;
@@ -408,6 +408,10 @@ textarea {
     font-size: 30px;
   }
 
+  .navbar ul li {
+    padding: 5% 2% 5% 2%;
+  }
+
   #brand {
     font-size: 34px;
   }
@@ -437,6 +441,7 @@ textarea {
   #aboutme {
     font-size: 12px;
     padding: 0 5% 0 5%;
+    text-align: left;
   }
 
   input, textarea {
@@ -454,6 +459,14 @@ textarea {
   }
 
   #proj-container p {
+    font-size: 12px;
+  }
+
+  #ride {
+    font-size: 24px;
+  }
+
+  #blog p {
     font-size: 12px;
   }
 }
