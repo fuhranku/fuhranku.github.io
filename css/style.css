@@ -64,6 +64,7 @@ section {
   width: 90%;
   padding: 0 10% 0 0;
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   text-align: justify;
 }
 
@@ -336,11 +337,73 @@ textarea {
   }
 
   .heading {
-    font-size: 60px;
+    font-size: 56px;
   }
 
   .heading-small {
     font-size: 30px;
+  }
+
+  #brand {
+    font-size: 34px;
+    float: none;
+  }
+
+  .navlogo {
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .navbar ul li {
+    float: none;
+  }
+
+  .navbar {
+    text-align: center;
+  }
+
+  .black-box {
+    font-size: 16px;
+  }
+
+  .proj-name {
+    font-size: 20px;
+  }
+
+  #aboutme {
+    font-size: 13.5px;
+    padding: 0 5% 0 5%;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+
+  form, #contactme {
+    width: 80%;
+    padding: 0 10% 0 10%;
+  }
+
+  section {
+    padding-top: 0;
+  }
+}
+
+@media (max-width : 960px) {
+  .navbar ul li {
+    padding: 5% 3% 5% 3%;
+  }
+  
+  .heading {
+    font-size: 75px;
+  }
+
+  #brand {
+    font-size: 28px;
+  }
+
+  .proj-name {
+    font-size: 20px;
   }
 }
 
@@ -354,10 +417,45 @@ textarea {
   }
 
   .heading {
-    font-size: 75px;
+    font-size: 65px;
   }
 
   .heading-small {
     font-size: 25px;
+  }
+
+  #brand {
+    font-size: 34px;
+    float: none;
+  }
+
+  .navlogo {
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .navbar ul li {
+    float: none;
+  }
+
+  .navbar {
+    text-align: center;
+  }
+
+  #aboutme {
+    padding: 0 5% 0 5%;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+
+  form, #contactme {
+    width: 80%;
+    padding: 0 10% 0 10%;
+  }
+
+  section {
+    padding-top: 0;
   }
 }

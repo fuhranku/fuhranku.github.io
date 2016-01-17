@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+  });
+  
   $(".main").onepage_scroll({
     sectionContainer: "section",     
     easing: "ease",           
@@ -35,5 +39,8 @@ $(document).ready(function() {
   });
   $('#below').click(function() {
     $(".main").moveTo(4);
+  });
+  $('#brand').click(function() {
+    $("#brand").moveTo(1);
   });
 });
