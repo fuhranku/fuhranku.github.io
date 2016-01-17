@@ -32,7 +32,7 @@ section {
 
 .img-circle {
   border-radius: 50%;
-  outline: 5px solid black;
+  box-shadow: 0 0 5px black;
 }
 
 #headshot {
