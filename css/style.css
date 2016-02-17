@@ -421,7 +421,7 @@ textarea {
     text-align: center;
   }
 
-.navbar ul li a, .navbar ul li span {
+  .navbar ul li a, .navbar ul li span {
     float: none;
     font-size: 13.5px;
   }
