@@ -16,10 +16,12 @@ $(document).ready(function() {
       if(index === 2) {
         $('#navigation').removeClass('light white').addClass('navy');
       }
+      /*
       else if(index === 3) {
         $('#navigation').removeClass('navy light').addClass('white');
       }
-      else if(index === 4) {
+      */
+      else if(index === 3) {
         $('#navigation').removeClass('navy light').addClass('white');
         //$('#navigation').removeClass('white navy').addClass('light');
       }
@@ -35,10 +37,10 @@ $(document).ready(function() {
     $(".main").moveTo(2);
   });
   $('#con-link').click(function() {
-    $(".main").moveTo(4);
+    $(".main").moveTo(3);
   });
   $('#below').click(function() {
-    $(".main").moveTo(4);
+    $(".main").moveTo(3);
   });
   $('#brand').click(function() {
     $("#brand").moveTo(1);
