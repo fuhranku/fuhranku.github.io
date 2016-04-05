@@ -60,6 +60,19 @@ section {
           box-shadow: 1px 3px 2px rgba(0,0,0,0.2);
 }
 
+.sm-links a {
+  color: black;
+}
+
+.sm-links a:visited {
+  color: black;
+}
+
+.sm-icon {
+  font-size: 36px !important;
+  padding: 15px 5px 5px 0;
+}
+
 #aboutme {
   width: 90%;
   padding: 0 10% 0 0;

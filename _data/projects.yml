@@ -1,3 +1,9 @@
+- name: Sento
+  created: Spring 2016
+  brief: "Chrome extension to fetch data from and send data to MyAnimeList.com, eliminating the need to actually go on the site. Created for fun and to gain experience with REST APIs. View it on GitHub!"
+  details:
+  technologies: "Javascript, HTML, CSS, jQuery"
+
 - name: Cornell First in Class Website
   created: Fall 2015
   brief: "Official website for Cornell First in Class, with news, events, and information regarding Cornell's first generation student initiatives."

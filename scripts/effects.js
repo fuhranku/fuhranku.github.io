@@ -45,4 +45,12 @@ $(document).ready(function() {
   $('#brand').click(function() {
     $("#brand").moveTo(1);
   });
+
+  $('#proj-container').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    nextArrow: '<button type="button" class="slick-next"><i class="fa fa-arrow-circle-down" style="font-size: 22px !important; color: white;"></i></button>'
+  });
 });
