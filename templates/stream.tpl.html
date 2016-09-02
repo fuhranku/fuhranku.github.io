@@ -1,0 +1,12 @@
+<div class="stream">
+  <span class="navCategory">Where I've Been&What I Thought</span>
+  <div ng-scroll-footer="loadMore">
+    <div class='row'>
+      <div class='{{"col-sm-" + (12 / rowSize)}}' ng-repeat='image in images'>
+        <div ng-include src="'templates/event.tpl.html?1'"
+             class="event">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

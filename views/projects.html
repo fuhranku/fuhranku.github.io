@@ -1,0 +1,13 @@
+<div id="projects-view">
+  <span class="largeCapBold">Projects</span>
+  <div class='row'>
+    <div class="col-sm-6" ng-repeat='project in projects'>
+      <a href="#/myself/projects/{{$index}}">
+        <div ng-include src="'templates/project.tpl.html?1'"
+             onload="project = project"
+             class="event">
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

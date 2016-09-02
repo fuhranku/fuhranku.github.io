@@ -1,118 +1,48 @@
----
-title: Personal Website
----
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
-    <title>Frank Chan</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.onepage-scroll.min.js"></script>
-    <script type="text/javascript" src="scripts/effects.js"></script>
-    <script type="text/javascript" src="scripts/slick.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/onepage-scroll.css"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css"></script>
-    <link rel="stylesheet" type="text/css" href="css/grid.css"></script>
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- angular -->
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+
+    <!-- app -->
+    <script type="text/javascript" src="myApp.js"></script>
+    <script type="text/javascript" src="controllers/navigationCtrl.js"></script>
+    <script type="text/javascript" src="controllers/homeCtrl.js"></script>
+    <script type="text/javascript" src="controllers/streamCtrl.js"></script>
+    <script type="text/javascript" src="controllers/projectsCtrl.js"></script>
+    <script type="text/javascript" src="controllers/projectPageCtrl.js"></script>
+    <script type="text/javascript" src="services/navigationConfigSvc.js"></script>
+    
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/grid12.css" />
+    <link rel="stylesheet" type="text/css" href="css/event.css"  />
+    <link rel="stylesheet" type="text/css" href="css/fadein.css" />
   </head>
   <body>
-    <div id="navigation" class="grid fixed">
-      <div class="col-1-3 navlogo">
-        <span id="brand">Frank Chan</span>
-        <br class='brclear'>
-      </div>
-      <div class="col-2-3 navbar">
-        <ul>
-          <li><span id="con-link">contact</span></li>
-          <li><a href="Resume Spring 2016 Website.pdf">resume</a></li>
-          <!--
-          <li><a>blog</a></li>
-          -->
-          <li><span id="proj-link">projects</span></li>
-          <br class='brclear'>
-        </ul>
-      </div>
+    <div id="outline-top" class="outline"></div>
+    <div id="outline-right" class="outline"></div>
+    <div id="outline-bottom" class="outline"></div>
+    <div id="outline-left" class="outline"></div>
+    <div id="header">
+      <a href="#/"><img id="logo" src="images/FRANK.png"/></a>
     </div>
-    <div class="main">
-      <section id="intro">
-        <div class="grid">
-          <div class="col-1-2">
-            <img id="headshot" class="img-circle" src="images/headshot.jpg"/>
-            <div id="label-container">
-              <span class="black-box">Student | 19 | New York City</span>
-              <div class="sm-links">
-                <span><a href="http://github.com/fuhranku"><i class="fa fa-github sm-icon"></i></a></span>
-                <span><a href="http://linkedin.com/in/fuhranku"><i class="fa fa-linkedin-square sm-icon"></i></a></span>
-                <span><a href="http://ewh.engineering.cornell.edu"><i class="fa fa-globe sm-icon"></i></a></span>
-                <span><a href="http://cornellfirstinclass.com"><i class="fa fa-bell sm-icon"></i></a></span>
-              </div>
-            </div>
-          </div>
-          <div class="col-1-2">
-            <div id="aboutme">
-              <span class="heading-small cursive">Hey there,</span> my name is Frank Chan and I study computer science in the Cornell University College of Engineering. On campus I am involved in Cornell's first generation student initiative, First in Class, as webmaster and creator of the Cornell First in Class website. I am also a member of Cornell Engineering World Health's computer science subteam. Outside of school my interests range from coding to paddling to binge watching shows, to, of course, trying new foods. One of my favorite things to do is try new restaurants. See where I've been, what I've done, and what I'm doing. Or go right ahead and leave a message <span id="below" class="heading-small cursive lb">down below.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="projects">
-        <div class="grid">
-          <span id="myproj"><span id="my" class="heading cursive">my</span><span id="proj-heading" class="heading bold">projects</span></span>
-          <div class="col-1-2">
-            <div id="proj-container">
-            {% for project in site.data.projects %}
-              <div class="proj-desc">
-                <span class="proj-name">{{ project.name }}</span>
-                <p>{{ project.brief }}</p>
-                <p>Technologies used: {{ project.technologies }}</p>
-              </div>
-            {% endfor %}
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--
-      <section id="blog">
-        <span id="debuglog" class="heading">de<span class="bold">b</span>ug<span class="bold">log</span></span>
-        <div class="grid">
-          <div class="col-1-2">
-            <div id="mission">
-              <p>My personal mission starting 2016 is to track my coding experiences through this debug log, where I write about my projects, my bugs, and often my own foolishness. I hope writing in digital ink will help me remember my past mistakes and how to grow from them. Feel free to follow me during the painful process of learning. Witness my small victories, my biggest blunders, and my greatest triumps. It's going to be great!</p>
-            </div>
-          </div>
-          <div class="col-1-2">
-            <div id="preview">
-              <h1>Blog coming soon</h1>
-              <a id="ride">Ride with me through the journey of more success >></a>
-            </div>
-          </div>
-        </div>
-      </section>
-      -->
-      <section id="contact">
-        <div class="grid">
-          <div class="col-1-2">
-            <span id="getin" class="heading">let's get in</span>
-            <div id="touch" class="heading cursive">touch</div>
-          </div>
-          <div class="col-1-2">
-            <br><br>
-            <span id="contactme" class="heading-small bold">contact me</span>
-            <form action="//formspree.io/fc249@cornell.edu" method="POST">
-              <input type="text" name="name" placeholder="name"><br><br>
-              <input type="text" name="_replyto" placeholder="email"><br><br>
-              <textarea rows="4" name="message" placeholder="leave a message"></textarea><br><br>
-              <input id="submit" class="black-box" type="submit" name="submit">
-            </form>
-          </div>
-        </div>
-      </section>
+    <div id="navbar" ng-controller="NavigationController as navigation">
+      <ul class="navSection" ng-repeat="section in navigation.sections">
+        <li class="navCategory"><a ng-href="#/{{section.path}}">{{section.category}}</a></li>
+        <li class="navSubsection" ng-repeat="subsection in section.subsections">
+          <a ng-href="#/{{subsection.path}}">{{subsection.label}}</a>
+        </li>
+        <div class="emptyDivider">
+      </ul>
     </div>
+    <div id="main">
+      <!-- injected views go here -->
+      <div ng-view></div>
+    </div>
+    <footer id="footer" class="container-fluid">
+      <div ng-include src="'templates/footer.tpl.html?1'"></div>
+    </footer>
   </body>
 </html>
