@@ -1,0 +1,160 @@
+{
+  "projects" : [
+    {
+      "id" : "ewh-website",
+      "title" : "EWH Website",
+      "date" : "Fall 2015-2016",
+      "description" : "Engineering World Health Project Team website, serving as a portal to apply, receive news, and view the team and their projects.",
+      "thumbnail" : "http://res.cloudinary.com/fuhranku-github-io/image/upload/ewh_thumbnail.png",
+      "images" : ["http://res.cloudinary.com/fuhranku-github-io/image/upload/website_1.png", "http://res.cloudinary.com/fuhranku-github-io/image/upload/website_2.png"],
+      "details" : [
+        {
+          "header" : "OpenLayers 3",
+          "explanation" : "The project page features an interactive map showing our team's influence over the world since inception, created with the use of the OpenLayers 3 Javascript library and simple jQuery."
+        },
+        {
+          "header" : "Mustache.js",
+          "explanation" : "Mustache provides easy to use HTML templating, with information about team members and projects stored in JSON files, and retrieved and inserted using jQuery."
+        },
+        {
+          "header" : "Google Apps Script",
+          "explanation" : "I utilized Google Spreadsheets as a backend for the website's application. Upon submit, a POST request is made to a Google Apps Script run as a web application, which then maps the individual form inputs to a new row in the spreadsheet."
+        },
+        {
+          "header" : "Transition to Angular",
+          "explanation" : "While the current tech stack for the website works fine, I feel the code is not very organized and could be made more concise with the use of Angular, especially with Angular's simplified HTML templating and DOM manipulation."
+        }
+      ],
+      "links" : [
+        {
+          "source" : "github",
+          "url" : "https://github.com/Cornell-Engineering-World-Health/EWHSite2"
+        },
+        {
+          "source" : "website",
+          "url" : "https://ewh.engineering.cornell.edu/"
+        }
+      ]
+    },
+    {
+      "id" : "sento",
+      "title" : "Sento",
+      "date" : "Spring 2016",
+      "description" : "Chrome extension to search for anime titles, and fetch and send data to MyAnimeList, eliminating the need to go to the site.",
+      "thumbnail" : "http://res.cloudinary.com/fuhranku-github-io/image/upload/sento_thumbnail.png",
+      "images" : ["http://res.cloudinary.com/fuhranku-github-io/image/upload/sento_1.png", "http://res.cloudinary.com/fuhranku-github-io/image/upload/sento_2.png"],
+      "details" : [
+        {
+          "header" : "UI Design",
+          "explanation" : "I designed and implemented the entire extension, creating all logos, icons, and buttons in Sketch."
+        },
+        {
+          "header" : "REST API",
+          "explanation" : "MyAnimeList provides a simple REST API to retrieve and update anime and user information in the form of XML from their database. A large part of the incentive for this project was becoming familiar with interacting with REST APIs through different http requests, written in both jQuery and vanilla Javascript."
+        },
+        {
+          "header" : "Regex",
+          "explanation" : "The extension automatically tries to locate the title of the anime from the header of the tab you're currently in. Since most tab titles are dynamically generated with the anime title and episode number, the information can be extracted with the use of regexes."
+        },
+        {
+          "header" : "Chrome Storage",
+          "explanation" : "Tab titles are formatted differently on different websites, so the extension asks users to provide it with the title once for any given website, or \"calibrate\" the extension for the website. Given the title once, it can deduce what regexes are needed to extract the title in the future, and stores this information in local Chrome storage for next time."
+        }
+      ],
+      "links" : [
+        {
+          "source" : "github",
+          "url" : "https://github.com/fuhranku/sento"
+        },
+        {
+          "source" : "chrome store",
+          "url" : "https://chrome.google.com/webstore/detail/sento-myanimelist-updater/ednoacfdjnjjmcpjcljpnmioicjnldcj"
+        }
+      ]
+    },
+    {
+      "id" : "leafdb",
+      "title" : "LeafDB",
+      "date" : "Fall 2015",
+      "description" : "A functional local file storage system with SQL-like commands to query, supporting primitive datatypes and joins between columns.",
+      "thumbnail" : "http://res.cloudinary.com/fuhranku-github-io/image/upload/leafdb_thumbnail.png",
+      "images" : ["http://res.cloudinary.com/fuhranku-github-io/image/upload/leafdb_2.png", "http://res.cloudinary.com/fuhranku-github-io/image/upload/leafdb_1.png"],
+      "details" : [
+        {
+          "header" : "OCaml",
+          "explanation" : "Created by a group of four, the entire project is implemented in the object-oriented functional programming language OCaml as our final project for functional programming."
+        },
+        {
+          "header" : "OCamllex & Menhir",
+          "explanation" : "In order to use SQL-like commands to query, I implemented a lexer with OCamllex to tokenize queries into words and a parser with Menhir in order to match the structure of the queries. I also worked on the interpreter to recursively map these queries to specific operations."
+        },
+        {
+          "header" : "Levels of Abstraction",
+          "explanation" : "The project required working on many different levels of abstraction. One role I took on for the project was working on a higher level, representing databases as directories and tables as CSV files, manipulating the file structure using UNIX commands and the csv files using an external OCaml csv module."
+        }
+      ],
+      "links" : [
+        {
+          "source" : "github",
+          "url" : "https://github.com/fuhranku/leafdb"
+        }
+      ]
+    },
+    {
+      "id" : "dash-in-the-dark",
+      "title" : "Dash in the Dark",
+      "date" : "Summer 2015",
+      "description" : "A single device two player game racing in the dark through generated mazes and culminating in a duel to the death.",
+      "thumbnail" : "http://res.cloudinary.com/fuhranku-github-io/image/upload/dash_thumbnail.png",
+      "images" : ["http://res.cloudinary.com/fuhranku-github-io/image/upload/dash_1.png", "http://res.cloudinary.com/fuhranku-github-io/image/upload/dash_2.png", "http://res.cloudinary.com/fuhranku-github-io/image/upload/dash_3.png"],
+      "details" : [
+        {
+          "header" : "Javascript",
+          "explanation" : "The game is coded in vanilla Javascript with an emphasis on object-oriented design."
+        },
+        {
+          "header" : "Randomized Prim's Algorithm",
+          "explanation" : "A maze is essentially a minimal spanning tree, one with no cycles and hence only one path from a start point to a finish point. Mazes for the game are generated upon start using a randomized Prim's algorithm, starting at the top left corner and spanning out to generate the maze."
+        },
+        {
+          "header" : "HTML5 Canvas",
+          "explanation" : "The game consists of three different layers of overlapping HTML5 canvasses. The bottom layer contains the maze, which does not need to be refreshed once it is generated. The middle layer is where the player and all projectiles are rendered, which needs to be updated constantly as players move. The final, top-most layer is the layer of darkness with a spotlight following the characters. This is refreshed as the characters move but is eventually removed complete when the first character finishes the maze."
+        }
+      ],
+      "links" : [
+        {
+          "source" : "github",
+          "url" : "https://github.com/fuhranku/dash-in-the-dark"
+        },
+        {
+          "source" : "game",
+          "url" : "https://fuhranku.github.io/dash-in-the-dark"
+        }
+      ]
+    },
+    {
+      "id" : "pyductor",
+      "title" : "pyDuctor",
+      "date" : "Spring 2015",
+      "description" : "Control your music by using hand gestures to alter pitch and tempo of .wav files.",
+      "thumbnail" : "http://res.cloudinary.com/fuhranku-github-io/image/upload/pyductor_thumbnail.png",
+      "images" : ["http://res.cloudinary.com/fuhranku-github-io/image/upload/pyductor_1.png"],
+      "details" : [
+        {
+          "header" : "LeapMotion",
+          "explanation" : "We utilized the Leap Motion Python SDK to interface with the Leap Motion device, getting the relative position of palms above the device and mapping that onto a numerical scale."
+        },
+        {
+          "header" : "TkInter GUI",
+          "explanation" : "I created a GUI to visualize control over volume and tempo based on the height of two bars."
+        }
+      ],
+      "links" : [
+        {
+          "source" : "github",
+          "url" : "https://github.com/fuhranku/pyDuctor"
+        }
+      ]
+    }
+  ]
+}
