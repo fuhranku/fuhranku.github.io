@@ -19,12 +19,30 @@ app.config(function($routeProvider) {
     })
     .when('/wibwit', {
       templateUrl : 'templates/stream.tpl.html',
-      controller  : 'StreamController'
-      //use resolve to inject dependencies
+      controller  : 'StreamController',
+      resolve : {
+        events : function(eventsFactory) {
+          return eventsFactory.getEvents('json/events.json');
+        }
+      }
     })
     .when('/wibwit/food', {
       templateUrl : 'templates/stream.tpl.html',
-      controller  : 'StreamController'
+      controller  : 'StreamController',
+      resolve : { 
+        events : function(eventsFactory) {
+          return eventsFactory.getFood('json/events.json');
+        }
+      }
+    })
+    .when('/wibwit/places', {
+      templateUrl : 'templates/stream.tpl.html',
+      controller  : 'StreamController',
+      resolve : { 
+        events : function(eventsFactory) {
+          return eventsFactory.getPlaces('json/events.json');
+        }
+      }
     })
     .when('/contact', {
       templateUrl : 'views/contact.html'
