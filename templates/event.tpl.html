@@ -11,13 +11,13 @@
     <span class="location">{{view.location}}</span>
     <br>
     <button ng-class="{ viewButton:!isSelected($parent.$parent.$parent.$index,
-                                               $parent.$index, 
+                                               $parent.$index,
                                                $index),
                         viewButtonActive:isSelected($parent.$parent.$parent.$index,
                                                     $parent.$index,
                                                     $index) }"
-            ng-click="select($parent.$parent.$parent.$index, 
-                             $parent.$index, 
+            ng-click="select($parent.$parent.$parent.$index,
+                             $parent.$index,
                              $index)"
             ng-repeat="image in view.images">
       {{$index + 1}}
@@ -27,11 +27,7 @@
 
 <style>
 .eventImageSpaced {
-  width: 70%;
-}
-
-.eventImageClose {
-  width: 90%;
+  width: 100%;
 }
 
 .viewButton {
