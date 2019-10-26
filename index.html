@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
+    <!-- angular -->
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+
+    <!-- app -->
+    <script type="text/javascript" src="myApp.js"></script>
+    <script type="text/javascript" src="controllers/navigationCtrl.js"></script>
+    <script type="text/javascript" src="controllers/homeCtrl.js"></script>
+    <script type="text/javascript" src="controllers/streamCtrl.js"></script>
+    <script type="text/javascript" src="controllers/projectsCtrl.js"></script>
+    <script type="text/javascript" src="controllers/projectPageCtrl.js"></script>
+    <script type="text/javascript" src="services/navigationConfigSvc.js"></script>
+    <script type="text/javascript" src="factories/eventsFactory.js"></script>
+    <script type="text/javascript" src="factories/streamFactory.js"></script>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/grid12.css" />
+    <link rel="stylesheet" type="text/css" href="css/event.css"  />
+    <link rel="stylesheet" type="text/css" href="css/fadein.css" />
+
+    <!-- title -->
+    <title>Frank Chan</title>
   </head>
   <body>
-    <div class="container">
-      <h2 class="name">
-        Frank Chan
-      </h2>
-      <p>Now under maintenance.</p>
+    <div id="outline-top" class="outline"></div>
+    <div id="outline-right" class="outline"></div>
+    <div id="outline-bottom" class="outline"></div>
+    <div id="outline-left" class="outline"></div>
+    <div id="header">
+      <a href="#/"><img id="logo" src="images/FRANK.png"/></a>
     </div>
+    <div id="navbar" ng-controller="NavigationController as navigation">
+      <ul class="navSection" ng-repeat="section in navigation.sections">
+        <li class="navCategory"><a ng-href="#/{{section.path}}">{{section.category}}</a></li>
+        <li class="navSubsection" ng-repeat="subsection in section.subsections">
+          <a ng-href="#/{{subsection.path}}">{{subsection.label}}</a>
+        </li>
+        <div class="emptyDivider">
+      </ul>
+    </div>
+    <div id="main">
+      <!-- injected views go here -->
+      <div ng-view></div>
+    </div>
+    <footer id="footer" class="container-fluid">
+      <div ng-include src="'templates/footer.tpl.html?1'"></div>
+    </footer>
   </body>
 </html>
-
-<style>
-  body {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-  }
-  .container {
-    width: 400px;
-    height: 300px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-  }
-  .name {
-    font-size: 36px;
-  }
-</style>
